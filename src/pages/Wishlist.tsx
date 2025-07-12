@@ -34,13 +34,13 @@ const mockWishlistItems: WishlistItem[] = [
   },
   {
     id: "2",
-    name: "Vintage Denim Jacket",
+    name: "Floral Summer Dress",
     category: "Western",
     gender: "Women",
     size: "L",
     condition: "Brand New",
     status: "Swap Pending",
-    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=300&h=400&fit=crop",
     addedDate: "2024-01-12"
   },
   {
@@ -64,6 +64,28 @@ const mockWishlistItems: WishlistItem[] = [
     status: "Available",
     image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=300&h=400&fit=crop",
     addedDate: "2024-01-08"
+  },
+  {
+    id: "5",
+    name: "Designer Blazer",
+    category: "Western",
+    gender: "Men",
+    size: "L",
+    condition: "Gently Used",
+    status: "Available",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
+    addedDate: "2024-01-05"
+  },
+  {
+    id: "6",
+    name: "Embroidered Lehenga Set",
+    category: "Traditional",
+    gender: "Women",
+    size: "M",
+    condition: "Brand New",
+    status: "Reserved",
+    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=300&h=400&fit=crop",
+    addedDate: "2024-01-03"
   }
 ];
 
@@ -319,7 +341,7 @@ export default function Wishlist() {
 
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg line-clamp-1">{item.name}</CardTitle>
-                  <CardDescription className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1">
                     <Badge variant="secondary" className="text-xs">
                       {item.gender}
                     </Badge>
@@ -329,7 +351,7 @@ export default function Wishlist() {
                     <Badge variant="secondary" className="text-xs">
                       {item.size}
                     </Badge>
-                  </CardDescription>
+                  </div>
                 </CardHeader>
 
                 <CardContent className="pb-2">
